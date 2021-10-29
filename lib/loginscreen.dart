@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     alignment: Alignment.center,
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      'AlgoCenter',
+                      'ALGOSMART OFFICE',
                       style: TextStyle(
                           color: Colors.deepOrange,
                           fontWeight: FontWeight.w500,
@@ -166,7 +166,42 @@ class _LoginScreenState extends State<LoginScreen> {
                     )
                   ],
                   mainAxisAlignment: MainAxisAlignment.center,
-                ))
+                )),
+                SizedBox(
+                  height: 10.0,
+                ),
+                //---------------
+                Container(
+                    height: 50,
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    // ignore: deprecated_member_use
+                    child: RaisedButton(
+                      textColor: Colors.white,
+                      color: Colors.blue,
+                      child: Text('Login with Google'),
+                      onPressed: () {
+                        postData();
+                        // print(nameController.text);
+                        // print(passwordController.text);
+                      },
+                    )),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Container(
+                    height: 50,
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    // ignore: deprecated_member_use
+                    child: RaisedButton(
+                      textColor: Colors.white,
+                      color: Colors.blueAccent,
+                      child: Text('Login with Mate'),
+                      onPressed: () {
+                        postData();
+                        // print(nameController.text);
+                        // print(passwordController.text);
+                      },
+                    )),
               ],
             )));
   }
