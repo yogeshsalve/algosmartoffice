@@ -61,7 +61,7 @@ class _Dashboard1State extends State<Dashboard1> {
       onWillPop: () => showExitPopup(context),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("dashboard1"),
+          title: Text("Manager dashboard"),
         ),
       ),
     );
