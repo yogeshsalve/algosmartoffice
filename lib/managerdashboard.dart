@@ -47,14 +47,14 @@ Future<bool> showExitPopup(context) async {
       });
 }
 
-class Dashboard1 extends StatefulWidget {
-  const Dashboard1({Key? key}) : super(key: key);
+class ManagerDashboard extends StatefulWidget {
+  const ManagerDashboard({Key? key}) : super(key: key);
 
   @override
-  _Dashboard1State createState() => _Dashboard1State();
+  _ManagerDashboardState createState() => _ManagerDashboardState();
 }
 
-class _Dashboard1State extends State<Dashboard1> {
+class _ManagerDashboardState extends State<ManagerDashboard> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -62,6 +62,37 @@ class _Dashboard1State extends State<Dashboard1> {
       child: Scaffold(
         appBar: AppBar(
           title: Text("Manager dashboard"),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child: Text('Drawer Header'),
+              ),
+              ListTile(
+                title: const Text('Item 1'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

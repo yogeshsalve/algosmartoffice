@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:smart_attendance/dashboard.dart';
-import 'package:smart_attendance/dashboard1.dart';
+import 'package:smart_attendance/managerdashboard.dart';
+import 'package:smart_attendance/register.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -36,8 +37,8 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (BuildContext context) => Dashboard()));
       } else if (result['user']['role'] == "MANAGER") {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => Dashboard1()));
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => ManagerDashboard()));
       }
     } else if (result['error'] == "400") {
       showDialog(
@@ -161,7 +162,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
-                        //signup screen
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                RegisterScreen()));
                       },
                     )
                   ],
