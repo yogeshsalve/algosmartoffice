@@ -177,7 +177,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     // ignore: deprecated_member_use
                     child: RaisedButton(
                       textColor: Colors.white,
-                      color: Colors.blue,
+                      color: Colors.red,
                       child: Text('Login with Google'),
                       onPressed: () {
                         postData();
